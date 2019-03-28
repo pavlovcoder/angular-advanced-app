@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const appRoutes: Routes = [
   { path: 'pipes', component: PipesComponent },
-  { path: '', redirectTo: '/pipes', pathMatch: 'full' }
+  { path: '', redirectTo: '/pipes', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 
