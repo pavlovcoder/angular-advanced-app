@@ -2,9 +2,31 @@
 <p>Module for explaining pipes and all functionalities of custom displaying data on the Angular.</p>
 <hr>
 <h3>Module navigation:</h3>
-<a href="#pipe-simple" target="_self">Pipe simple</a>
+<ul>
+    <li>
+        <a href="#pipe-simple" target="_self">Pipe simple</a>
+    </li>
+    <li>
+        <a href="#pipe-toggle-format" target="_self">Pipe toggle format</a>
+    </li>
+    <li>
+        <a href="#pipe-chainded-pars" target="_self">Pipe toggle chained parameters</a>
+    </li>
+</ul>
 
 <hr>
 <a id="pipe-simple"></a>
 <h3>Pipe simple</h3>
 <p>My birthday is {{ birthday | date }}</p>
+
+<hr>
+<a id="pipe-toggle-format"></a>
+<h3>Pipe toggle format</h3>
+<p>My birthday is {{ birthday | date:format }}</p>
+<button (click)="toggleFormat()">Toggle Format</button>
+
+<hr>
+<a id="pipe-chained-pars"></a>
+<h3>Pipe chained parameters</h3>
+<p>My chained birthday is {{ birthday | date:'fullDate' | uppercase }}</p>
+
