@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CustomPipePipe } from './pipes/custom-pipe.pipe';
 
 const appRoutes: Routes = [
   { path: 'pipes', component: PipesComponent },
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     PipesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CustomPipePipe
   ],
   imports: [
     BrowserModule,
