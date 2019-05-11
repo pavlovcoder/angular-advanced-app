@@ -15,6 +15,9 @@
     <li>
         <a href="#pipe-customized" target="_self">Pipe customized</a>
     </li>
+    <li>
+        <a href="#changes-detection-without-pipes" target="_self">Changes detection without pipes</a>
+    </li>
 </ul>
 
 <hr>
@@ -38,4 +41,29 @@
 <h3>Pipe customized</h3>
 <p>Super power boost: {{ 2 | exponentialStrength: 10 }}</p>
 
+<hr>
+<a id="changes-detection-without-pipes"></a>
+<h3>Changes detection without pipes</h3>
+<p>
+    New hero:
+    <input type="text" #box (keyup.enter)="addHero(box.value); box.value = ''" placeholder="Hero name...">
+    <input type="checkbox" id="can-fly" [(ngModel)]="canFly"> can fly
+</p>
+<p>
+    <input id="mutate" type="checkbox" [(ngModel)]="mutate"> Mutate array
+    <button type="button" (click)="reset()">Reset</button>
+</p>
 
+<h4>Heroes who fly (piped)</h4>
+<div id="flyers">
+    <div *ngFor="let hero of (heroes | flyingHeroes)">
+        {{ hero.name }}
+    </div>
+</div>
+
+<h4>All heroes (no pipe)</h4>
+<div id="all">
+    <div *ngFor="let hero of heroes">
+        {{ hero.name }}
+    </div>
+</div>

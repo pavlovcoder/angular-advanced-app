@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HEROES } from './heroes';
 
 @Component({
   selector: 'app-pipes',
